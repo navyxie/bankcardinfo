@@ -1,0 +1,31 @@
+{
+  "name": "bankcardinfo",
+  "version": "0.0.1",
+  "description": "'query bankcard infomation by bankcard NO.'",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/navyxie/bankcardinfo.git"
+  },
+  "keywords": [
+    "bacnkcard",
+    "bankname",
+    "bankinfo",
+    "银行卡",
+    "银行名字"
+  ],
+  "devDependencies": {
+    "mocha": "*",
+    "should": "*"
+  },
+  "readmeFilename": "README.md",
+  "author": "navyxie",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/navyxie/bankcardinfo/issues"
+  },
+  "homepage": "https://github.com/navyxie/bankcardinfo"
+}
