@@ -1,6 +1,6 @@
 {
   "name": "bankcardinfo",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "'query bankcard infomation by bankcard NO.'",
   "main": "index.js",
   "scripts": {
@@ -11,7 +11,7 @@
     "url": "https://github.com/navyxie/bankcardinfo.git"
   },
   "keywords": [
-    "bacnkcard",
+    "bankcard",
     "bankname",
     "bankinfo",
     "银行卡",
@@ -21,11 +21,33 @@
     "mocha": "*",
     "should": "*"
   },
-  "readmeFilename": "README.md",
-  "author": "navyxie",
+  "author": {
+    "name": "navyxie"
+  },
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/navyxie/bankcardinfo/issues"
   },
-  "homepage": "https://github.com/navyxie/bankcardinfo"
+  "homepage": "https://github.com/navyxie/bankcardinfo",
+  "_id": "bankcardinfo@0.0.3",
+  "_shasum": "f03ddecbc0af485ae74d7447a6a24aabddfe9d1d",
+  "_from": "bankcardinfo@",
+  "_npmVersion": "2.7.4",
+  "_nodeVersion": "0.12.2",
+  "_npmUser": {
+    "name": "navyxie",
+    "email": "navyxie2010@gmail.com"
+  },
+  "dist": {
+    "shasum": "f03ddecbc0af485ae74d7447a6a24aabddfe9d1d",
+    "tarball": "http://registry.npmjs.org/bankcardinfo/-/bankcardinfo-0.0.3.tgz"
+  },
+  "maintainers": [
+    {
+      "name": "navyxie",
+      "email": "navyxie2010@gmail.com"
+    }
+  ],
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/bankcardinfo/-/bankcardinfo-0.0.3.tgz"
 }

@@ -2044,7 +2044,7 @@
 			var patterns = bankcard.patterns;
 			for(var j = 0 , jLen = patterns.length ; j < jLen ; j++){
 				var pattern = patterns[j];
-				if(pattern.reg.test(cardNo)){
+				if((new RegExp(pattern.reg)).test(cardNo)){
 					var info = extend(bankcard,pattern);
 					delete info.patterns;
 					delete info.reg;
