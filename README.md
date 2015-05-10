@@ -5,7 +5,7 @@
 ###  API
 		/**
 		*@param number cardNo
-		*return object {backName:"中国工商银行",bankCode:"ICBC",cardType:"DC",cardTypeName:"储蓄卡"}
+		*return object {bankName:"中国工商银行",bankCode:"ICBC",cardType:"DC",cardTypeName:"储蓄卡"}
 		*/
 		getBankInfoByCardNo(cardNo) //cardNo must be number
 

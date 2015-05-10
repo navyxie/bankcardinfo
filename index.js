@@ -33,7 +33,7 @@
 	}
 	var bankcardList = [
 		{
-			backName:"中国邮政储蓄银行",
+			bankName:"中国邮政储蓄银行",
 			bankCode:"PSBC",
 			patterns:[
 				{
@@ -51,7 +51,7 @@
 			]
 		},
 		{
-			backName:"中国工商银行",
+			bankName:"中国工商银行",
 			bankCode:"ICBC",
 			patterns:[
 				{
@@ -97,7 +97,7 @@
 			]
 		},
 		{
-			backName:"中国农业银行",
+			bankName:"中国农业银行",
 			bankCode:"ABC",
 			patterns:[
 				{
@@ -123,7 +123,7 @@
 			]
 		},
 		{
-			backName:"中国银行",
+			bankName:"中国银行",
 			bankCode:"BOC",
 			patterns:[
 				{
@@ -157,7 +157,7 @@
 			]
 		},
 		{
-			backName:"中国建设银行",
+			bankName:"中国建设银行",
 			bankCode:"CCB",
 			patterns:[
 				{
@@ -195,7 +195,7 @@
 			]
 		},
 		{
-			backName:"中国交通银行",
+			bankName:"中国交通银行",
 			bankCode:"COMM",
 			patterns:[
 				{
@@ -229,7 +229,7 @@
 			]
 		},
 		{
-			backName:"招商银行",
+			bankName:"招商银行",
 			bankCode:"CMB",
 			patterns:[
 				{
@@ -259,7 +259,7 @@
 			]
 		},
 		{
-			backName:"中国民生银行",
+			bankName:"中国民生银行",
 			bankCode:"CMBC",
 			patterns:[
 				{
@@ -277,7 +277,7 @@
 			]
 		},
 		{
-			backName:"中国光大银行",
+			bankName:"中国光大银行",
 			bankCode:"CEB",
 			patterns:[
 				{
@@ -303,7 +303,7 @@
 			]
 		},
 		{
-			backName:"中信银行",
+			bankName:"中信银行",
 			bankCode:"CITIC",
 			patterns:[
 				{
@@ -325,7 +325,7 @@
 			]
 		},
 		{
-			backName:"华夏银行",
+			bankName:"华夏银行",
 			bankCode:"HXBANK",
 			patterns:[
 				{
@@ -339,7 +339,7 @@
 			]
 		},
 		{
-			backName:"深发/平安银行",
+			bankName:"深发/平安银行",
 			bankCode:"SPABANK",
 			patterns:[
 				{
@@ -361,7 +361,7 @@
 			]
 		},
 		{
-			backName:"兴业银行",
+			bankName:"兴业银行",
 			bankCode:"CIB",
 			patterns:[
 				{
@@ -387,7 +387,7 @@
 			]
 		},
 		{
-			backName:"上海银行",
+			bankName:"上海银行",
 			bankCode:"SHBANK",
 			patterns:[
 				{
@@ -405,7 +405,7 @@
 			]
 		},
 		{
-			backName:"浦东发展银行",
+			bankName:"浦东发展银行",
 			bankCode:"SPDB",
 			patterns:[
 				{
@@ -431,7 +431,7 @@
 			]
 		},
 		{
-			backName:"广发银行",
+			bankName:"广发银行",
 			bankCode:"GDB",
 			patterns:[
 				{
@@ -457,7 +457,7 @@
 			]
 		},
 		{
-			backName:"渤海银行",
+			bankName:"渤海银行",
 			bankCode:"BOHAIB",
 			patterns:[
 				{
@@ -467,7 +467,7 @@
 			]
 		},
 		{
-			backName:"广州银行",
+			bankName:"广州银行",
 			bankCode:"GCB",
 			patterns:[
 				{
@@ -477,7 +477,7 @@
 			]
 		},
 		{
-			backName:"金华银行",
+			bankName:"金华银行",
 			bankCode:"JHBANK",
 			patterns:[
 				{
@@ -491,7 +491,7 @@
 			]
 		},
 		{
-			backName:"温州银行",
+			bankName:"温州银行",
 			bankCode:"WZCB",
 			patterns:[
 				{
@@ -505,7 +505,7 @@
 			]
 		},
 		{
-			backName:"徽商银行",
+			bankName:"徽商银行",
 			bankCode:"HSBANK",
 			patterns:[
 				{
@@ -523,7 +523,7 @@
 			]
 		},
 		{
-			backName:"江苏银行",
+			bankName:"江苏银行",
 			bankCode:"JSBANK",
 			patterns:[
 				{
@@ -541,7 +541,7 @@
 			]
 		},
 		{
-			backName:"南京银行",
+			bankName:"南京银行",
 			bankCode:"NJCB",
 			patterns:[
 				{
@@ -555,7 +555,7 @@
 			]
 		},
 		{
-			backName:"宁波银行",
+			bankName:"宁波银行",
 			bankCode:"NBBANK",
 			patterns:[
 				{
@@ -573,7 +573,7 @@
 			]
 		},
 		{
-			backName:"北京银行",
+			bankName:"北京银行",
 			bankCode:"BJBANK",
 			patterns:[
 				{
@@ -587,7 +587,7 @@
 			]
 		},
 		{
-			backName:"北京农村商业银行",
+			bankName:"北京农村商业银行",
 			bankCode:"BJRCB",
 			patterns:[
 				{
@@ -601,7 +601,7 @@
 			]
 		},
 		{
-			backName:"汇丰银行",
+			bankName:"汇丰银行",
 			bankCode:"HSBC",
 			patterns:[
 				{
@@ -623,7 +623,7 @@
 			]
 		},
 		{
-			backName:"渣打银行",
+			bankName:"渣打银行",
 			bankCode:"SCB",
 			patterns:[
 				{
@@ -637,7 +637,7 @@
 			]
 		},
 		{
-			backName:"花旗银行",
+			bankName:"花旗银行",
 			bankCode:"CITI",
 			patterns:[
 				{
@@ -651,7 +651,7 @@
 			]
 		},
 		{
-			backName:"东亚银行",
+			bankName:"东亚银行",
 			bankCode:"HKBEA",
 			patterns:[
 				{
@@ -669,7 +669,7 @@
 			]
 		},
 		{
-			backName:"广东华兴银行",
+			bankName:"广东华兴银行",
 			bankCode:"GHB",
 			patterns:[
 				{
@@ -679,7 +679,7 @@
 			]
 		},
 		{
-			backName:"深圳农村商业银行",
+			bankName:"深圳农村商业银行",
 			bankCode:"SRCB",
 			patterns:[
 				{
@@ -689,7 +689,7 @@
 			]
 		},
 		{
-			backName:"广州农村商业银行股份有限公司",
+			bankName:"广州农村商业银行股份有限公司",
 			bankCode:"GZRCU",
 			patterns:[
 				{
@@ -699,7 +699,7 @@
 			]
 		},
 		{
-			backName:"东莞农村商业银行",
+			bankName:"东莞农村商业银行",
 			bankCode:"DRCBCL",
 			patterns:[
 				{
@@ -713,7 +713,7 @@
 			]
 		},
 		{
-			backName:"东莞市商业银行",
+			bankName:"东莞市商业银行",
 			bankCode:"BOD",
 			patterns:[
 				{
@@ -731,7 +731,7 @@
 			]
 		},
 		{
-			backName:"广东省农村信用社联合社",
+			bankName:"广东省农村信用社联合社",
 			bankCode:"GDRCC",
 			patterns:[
 				{
@@ -745,7 +745,7 @@
 			]
 		},
 		{
-			backName:"大新银行",
+			bankName:"大新银行",
 			bankCode:"DSB",
 			patterns:[
 				{
@@ -763,7 +763,7 @@
 			]
 		},
 		{
-			backName:"永亨银行",
+			bankName:"永亨银行",
 			bankCode:"WHB",
 			patterns:[
 				{
@@ -777,7 +777,7 @@
 			]
 		},
 		{
-			backName:"星展银行香港有限公司",
+			bankName:"星展银行香港有限公司",
 			bankCode:"DBS",
 			patterns:[
 				{
@@ -795,7 +795,7 @@
 			]
 		},
 		{
-			backName:"恒丰银行",
+			bankName:"恒丰银行",
 			bankCode:"EGBANK",
 			patterns:[
 				{
@@ -809,7 +809,7 @@
 			]
 		},
 		{
-			backName:"天津市商业银行",
+			bankName:"天津市商业银行",
 			bankCode:"TCCB",
 			patterns:[
 				{
@@ -827,7 +827,7 @@
 			]
 		},
 		{
-			backName:"浙商银行",
+			bankName:"浙商银行",
 			bankCode:"CZBANK",
 			patterns:[
 				{
@@ -841,7 +841,7 @@
 			]
 		},
 		{
-			backName:"南洋商业银行",
+			bankName:"南洋商业银行",
 			bankCode:"NCB",
 			patterns:[
 				{
@@ -863,7 +863,7 @@
 			]
 		},
 		{
-			backName:"厦门银行",
+			bankName:"厦门银行",
 			bankCode:"XMBANK",
 			patterns:[
 				{
@@ -881,7 +881,7 @@
 			]
 		},
 		{
-			backName:"福建海峡银行",
+			bankName:"福建海峡银行",
 			bankCode:"FJHXBC",
 			patterns:[
 				{
@@ -899,7 +899,7 @@
 			]
 		},
 		{
-			backName:"吉林银行",
+			bankName:"吉林银行",
 			bankCode:"JLBANK",
 			patterns:[
 				{
@@ -917,7 +917,7 @@
 			]
 		},
 		{
-			backName:"汉口银行",
+			bankName:"汉口银行",
 			bankCode:"HKB",
 			patterns:[
 				{
@@ -931,7 +931,7 @@
 			]
 		},
 		{
-			backName:"盛京银行",
+			bankName:"盛京银行",
 			bankCode:"SJBANK",
 			patterns:[
 				{
@@ -953,7 +953,7 @@
 			]
 		},	
 		{																			
-			backName:"大连银行",
+			bankName:"大连银行",
 			bankCode:"DLB",
 			patterns:[
 				{
@@ -971,7 +971,7 @@
 			]
 		},	
 		{																							
-			backName:"河北银行",
+			bankName:"河北银行",
 			bankCode:"BHB",
 			patterns:[
 				{
@@ -985,7 +985,7 @@
 			]
 		},
 		{																						
-			backName:"乌鲁木齐市商业银行",
+			bankName:"乌鲁木齐市商业银行",
 			bankCode:"URMQCCB",
 			patterns:[
 				{
@@ -999,7 +999,7 @@
 			]
 		},
 		{																							
-			backName:"绍兴银行",
+			bankName:"绍兴银行",
 			bankCode:"SXCB",
 			patterns:[
 				{
@@ -1017,7 +1017,7 @@
 			]
 		},
 		{																							
-			backName:"成都商业银行",
+			bankName:"成都商业银行",
 			bankCode:"CDCB",
 			patterns:[
 				{
@@ -1027,7 +1027,7 @@
 			]
 		},
 		{																						
-			backName:"抚顺银行",
+			bankName:"抚顺银行",
 			bankCode:"FSCB",
 			patterns:[
 				{
@@ -1045,7 +1045,7 @@
 			]
 		},
 		{																						
-			backName:"郑州银行",
+			bankName:"郑州银行",
 			bankCode:"ZZBANK",
 			patterns:[
 				{
@@ -1063,7 +1063,7 @@
 			]
 		},
 		{																						
-			backName:"宁夏银行",
+			bankName:"宁夏银行",
 			bankCode:"NXBANK",
 			patterns:[
 				{
@@ -1077,7 +1077,7 @@
 			]
 		},
 		{																						
-			backName:"重庆银行",
+			bankName:"重庆银行",
 			bankCode:"CQBANK",
 			patterns:[
 				{
@@ -1091,7 +1091,7 @@
 			]
 		},
 		{																						
-			backName:"哈尔滨银行",
+			bankName:"哈尔滨银行",
 			bankCode:"HRBANK",
 			patterns:[
 				{
@@ -1109,7 +1109,7 @@
 			]
 		},
 		{																							
-			backName:"兰州银行",
+			bankName:"兰州银行",
 			bankCode:"LZYH",
 			patterns:[
 				{
@@ -1123,7 +1123,7 @@
 			]
 		},
 		{																						
-			backName:"青岛银行",
+			bankName:"青岛银行",
 			bankCode:"QDCCB",
 			patterns:[
 				{
@@ -1137,7 +1137,7 @@
 			]
 		},
 		{																						
-			backName:"秦皇岛市商业银行",
+			bankName:"秦皇岛市商业银行",
 			bankCode:"QHDCCB",
 			patterns:[
 				{
@@ -1151,7 +1151,7 @@
 			]
 		},
 		{																						
-			backName:"青海银行",
+			bankName:"青海银行",
 			bankCode:"BOQH",
 			patterns:[
 				{
@@ -1169,7 +1169,7 @@
 			]
 		},
 		{																						
-			backName:"台州银行",
+			bankName:"台州银行",
 			bankCode:"TZCB",
 			patterns:[
 				{
@@ -1195,7 +1195,7 @@
 			]
 		},
 		{																						
-			backName:"长沙银行",
+			bankName:"长沙银行",
 			bankCode:"CSCB",
 			patterns:[
 				{
@@ -1217,7 +1217,7 @@
 			]
 		},
 		{																						
-			backName:"泉州银行",
+			bankName:"泉州银行",
 			bankCode:"BOQZ",
 			patterns:[
 				{
@@ -1239,7 +1239,7 @@
 			]
 		},
 		{																						
-			backName:"包商银行",
+			bankName:"包商银行",
 			bankCode:"BSB",
 			patterns:[
 				{
@@ -1257,7 +1257,7 @@
 			]
 		},
 		{																						
-			backName:"龙江银行",
+			bankName:"龙江银行",
 			bankCode:"DAQINGB",
 			patterns:[
 				{
@@ -1279,7 +1279,7 @@
 			]
 		},
 		{																						
-			backName:"上海农商银行",
+			bankName:"上海农商银行",
 			bankCode:"SHRCB",
 			patterns:[
 				{
@@ -1297,7 +1297,7 @@
 			]
 		},
 		{		
-			backName:"浙江泰隆商业银行",
+			bankName:"浙江泰隆商业银行",
 			bankCode:"ZJQL",
 			patterns:[
 				{
@@ -1311,7 +1311,7 @@
 			]
 		},
 		{																							
-			backName:"内蒙古银行",
+			bankName:"内蒙古银行",
 			bankCode:"H3CB",
 			patterns:[
 				{
@@ -1325,7 +1325,7 @@
 			]
 		},
 		{		
-			backName:"广西北部湾银行",
+			bankName:"广西北部湾银行",
 			bankCode:"BGB",
 			patterns:[
 				{
@@ -1339,7 +1339,7 @@
 			]
 		},
 		{		
-			backName:"桂林银行",
+			bankName:"桂林银行",
 			bankCode:"GLBANK",
 			patterns:[
 				{
@@ -1357,7 +1357,7 @@
 			]
 		},
 		{																						
-			backName:"龙江银行",
+			bankName:"龙江银行",
 			bankCode:"DAQINGB",
 			patterns:[
 				{
@@ -1383,7 +1383,7 @@
 			]
 		},
 		{			
-			backName:"成都农村商业银行",
+			bankName:"成都农村商业银行",
 			bankCode:"CDRCB",
 			patterns:[
 				{
@@ -1397,7 +1397,7 @@
 			]
 		},
 		{			
-			backName:"福建省农村信用社联合社",
+			bankName:"福建省农村信用社联合社",
 			bankCode:"FJNX",
 			patterns:[
 				{
@@ -1411,7 +1411,7 @@
 			]
 		},
 		{			
-			backName:"天津农村商业银行",
+			bankName:"天津农村商业银行",
 			bankCode:"TRCB",
 			patterns:[
 				{
@@ -1425,7 +1425,7 @@
 			]
 		},
 		{			
-			backName:"江苏省农村信用社联合社",
+			bankName:"江苏省农村信用社联合社",
 			bankCode:"JSRCU",
 			patterns:[
 				{
@@ -1439,7 +1439,7 @@
 			]
 		},
 		{			
-			backName:"湖南农村信用社联合社",
+			bankName:"湖南农村信用社联合社",
 			bankCode:"SLH",
 			patterns:[
 				{
@@ -1449,7 +1449,7 @@
 			]
 		},
 		{			
-			backName:"江西省农村信用社联合社",
+			bankName:"江西省农村信用社联合社",
 			bankCode:"JXNCX",
 			patterns:[
 				{
@@ -1463,7 +1463,7 @@
 			]
 		},
 		{				
-			backName:"商丘市商业银行",
+			bankName:"商丘市商业银行",
 			bankCode:"SCBBANK",
 			patterns:[
 				{
@@ -1477,7 +1477,7 @@
 			]
 		},
 		{				
-			backName:"华融湘江银行",
+			bankName:"华融湘江银行",
 			bankCode:"HRXJB",
 			patterns:[
 				{
@@ -1491,7 +1491,7 @@
 			]
 		},
 		{			
-			backName:"衡水市商业银行",
+			bankName:"衡水市商业银行",
 			bankCode:"HSBK",
 			patterns:[
 				{
@@ -1501,7 +1501,7 @@
 			]
 		},
 		{			
-			backName:"重庆南川石银村镇银行",
+			bankName:"重庆南川石银村镇银行",
 			bankCode:"CQNCSYCZ",
 			patterns:[
 				{
@@ -1511,7 +1511,7 @@
 			]
 		},
 		{			
-			backName:"湖南省农村信用社联合社",
+			bankName:"湖南省农村信用社联合社",
 			bankCode:"HNRCC",
 			patterns:[
 				{
@@ -1521,7 +1521,7 @@
 			]
 		},
 		{				
-			backName:"邢台银行",
+			bankName:"邢台银行",
 			bankCode:"XTB",
 			patterns:[
 				{
@@ -1531,7 +1531,7 @@
 			]
 		},
 		{				
-			backName:"临汾市尧都区农村信用合作联社",
+			bankName:"临汾市尧都区农村信用合作联社",
 			bankCode:"LPRDNCXYS",
 			patterns:[
 				{
@@ -1541,7 +1541,7 @@
 			]
 		},
 		{				
-			backName:"东营银行",
+			bankName:"东营银行",
 			bankCode:"DYCCB",
 			patterns:[
 				{
@@ -1555,7 +1555,7 @@
 			]
 		},
 		{				
-			backName:"上饶银行",
+			bankName:"上饶银行",
 			bankCode:"SRBANK",
 			patterns:[
 				{
@@ -1569,7 +1569,7 @@
 			]
 		},
 		{				
-			backName:"德州银行",
+			bankName:"德州银行",
 			bankCode:"DZBANK",
 			patterns:[
 				{
@@ -1583,7 +1583,7 @@
 			]
 		},
 		{				
-			backName:"承德银行",
+			bankName:"承德银行",
 			bankCode:"CDB",
 			patterns:[
 				{
@@ -1593,7 +1593,7 @@
 			]
 		},
 		{				
-			backName:"云南省农村信用社",
+			bankName:"云南省农村信用社",
 			bankCode:"YNRCC",
 			patterns:[
 				{
@@ -1603,7 +1603,7 @@
 			]
 		},
 		{				
-			backName:"柳州银行",
+			bankName:"柳州银行",
 			bankCode:"LZCCB",
 			patterns:[
 				{
@@ -1621,7 +1621,7 @@
 			]
 		},
 		{				
-			backName:"威海市商业银行",
+			bankName:"威海市商业银行",
 			bankCode:"WHSYBANK",
 			patterns:[
 				{
@@ -1635,7 +1635,7 @@
 			]
 		},
 		{				
-			backName:"湖州银行",
+			bankName:"湖州银行",
 			bankCode:"HZBANK",
 			patterns:[
 				{
@@ -1645,7 +1645,7 @@
 			]
 		},
 		{				
-			backName:"潍坊银行",
+			bankName:"潍坊银行",
 			bankCode:"BANKWF",
 			patterns:[
 				{
@@ -1659,7 +1659,7 @@
 			]
 		},
 		{				
-			backName:"赣州银行",
+			bankName:"赣州银行",
 			bankCode:"GZB",
 			patterns:[
 				{
@@ -1673,7 +1673,7 @@
 			]
 		},
 		{					
-			backName:"日照银行",
+			bankName:"日照银行",
 			bankCode:"RZGWYBANK",
 			patterns:[
 				{
@@ -1683,7 +1683,7 @@
 			]
 		},
 		{				
-			backName:"南昌银行",
+			bankName:"南昌银行",
 			bankCode:"NCB",
 			patterns:[
 				{
@@ -1701,7 +1701,7 @@
 			]
 		},
 		{					
-			backName:"贵阳银行",
+			bankName:"贵阳银行",
 			bankCode:"GYCB",
 			patterns:[
 				{
@@ -1719,7 +1719,7 @@
 			]
 		},
 		{				
-			backName:"锦州银行",
+			bankName:"锦州银行",
 			bankCode:"BOJZ",
 			patterns:[
 				{
@@ -1733,7 +1733,7 @@
 			]
 		},
 		{					
-			backName:"齐商银行",
+			bankName:"齐商银行",
 			bankCode:"QSBANK",
 			patterns:[
 				{
@@ -1747,7 +1747,7 @@
 			]
 		},
 		{				
-			backName:"珠海华润银行",
+			bankName:"珠海华润银行",
 			bankCode:"RBOZ",
 			patterns:[
 				{
@@ -1761,7 +1761,7 @@
 			]
 		},
 		{				
-			backName:"葫芦岛市商业银行",
+			bankName:"葫芦岛市商业银行",
 			bankCode:"HLDCCB",
 			patterns:[
 				{
@@ -1771,7 +1771,7 @@
 			]
 		},
 		{				
-			backName:"宜昌市商业银行",
+			bankName:"宜昌市商业银行",
 			bankCode:"HBC",
 			patterns:[
 				{
@@ -1785,7 +1785,7 @@
 			]
 		},
 		{					
-			backName:"杭州商业银行",
+			bankName:"杭州商业银行",
 			bankCode:"HZCB",
 			patterns:[
 				{
@@ -1799,7 +1799,7 @@
 			]
 		},
 		{					
-			backName:"苏州市商业银行",
+			bankName:"苏州市商业银行",
 			bankCode:"JSBANK",
 			patterns:[
 				{
@@ -1809,7 +1809,7 @@
 			]
 		},
 		{				
-			backName:"辽阳银行",
+			bankName:"辽阳银行",
 			bankCode:"LYCB",
 			patterns:[
 				{
@@ -1819,7 +1819,7 @@
 			]
 		},
 		{					
-			backName:"洛阳银行",
+			bankName:"洛阳银行",
 			bankCode:"LYB",
 			patterns:[
 				{
@@ -1829,7 +1829,7 @@
 			]
 		},
 		{					
-			backName:"焦作市商业银行",
+			bankName:"焦作市商业银行",
 			bankCode:"JZCBANK",
 			patterns:[
 				{
@@ -1843,7 +1843,7 @@
 			]
 		},
 		{						
-			backName:"镇江市商业银行",
+			bankName:"镇江市商业银行",
 			bankCode:"ZJCCB",
 			patterns:[
 				{
@@ -1853,7 +1853,7 @@
 			]
 		},
 		{						
-			backName:"法国兴业银行",
+			bankName:"法国兴业银行",
 			bankCode:"FGXYBANK",
 			patterns:[
 				{
@@ -1863,7 +1863,7 @@
 			]
 		},
 		{					
-			backName:"大华银行",
+			bankName:"大华银行",
 			bankCode:"DYBANK",
 			patterns:[
 				{
@@ -1873,7 +1873,7 @@
 			]
 		},
 		{					
-			backName:"企业银行",
+			bankName:"企业银行",
 			bankCode:"DIYEBANK",
 			patterns:[
 				{
@@ -1883,7 +1883,7 @@
 			]
 		},
 		{					
-			backName:"华侨银行",
+			bankName:"华侨银行",
 			bankCode:"HQBANK",
 			patterns:[
 				{
@@ -1893,7 +1893,7 @@
 			]
 		},
 		{					
-			backName:"恒生银行",
+			bankName:"恒生银行",
 			bankCode:"HSB",
 			patterns:[
 				{
@@ -1915,7 +1915,7 @@
 			]
 		},
 		{						
-			backName:"临沂商业银行",
+			bankName:"临沂商业银行",
 			bankCode:"LSB",
 			patterns:[
 				{
@@ -1925,7 +1925,7 @@
 			]
 		},
 		{					
-			backName:"烟台商业银行",
+			bankName:"烟台商业银行",
 			bankCode:"YTCB",
 			patterns:[
 				{
@@ -1935,7 +1935,7 @@
 			]
 		},
 		{					
-			backName:"齐鲁银行",
+			bankName:"齐鲁银行",
 			bankCode:"QLB",
 			patterns:[
 				{
@@ -1949,7 +1949,7 @@
 			]
 		},
 		{					
-			backName:"BC卡公司",
+			bankName:"BC卡公司",
 			bankCode:"BCCC",
 			patterns:[
 				{
@@ -1963,7 +1963,7 @@
 			]
 		},
 		{					
-			backName:"集友银行",
+			bankName:"集友银行",
 			bankCode:"CYB",
 			patterns:[
 				{
@@ -1985,7 +1985,7 @@
 			]
 		},	
 		{					
-			backName:"大丰银行",
+			bankName:"大丰银行",
 			bankCode:"TFB",
 			patterns:[
 				{
@@ -2007,7 +2007,7 @@
 			]
 		},
 		{					
-			backName:"AEON信贷财务亚洲有限公司",
+			bankName:"AEON信贷财务亚洲有限公司",
 			bankCode:"AEON",
 			patterns:[
 				{
@@ -2021,7 +2021,7 @@
 			]
 		},
 		{															
-			backName:"澳门BDA",
+			bankName:"澳门BDA",
 			bankCode:"MABDA",
 			patterns:[
 				{
@@ -2049,6 +2049,7 @@
 					delete info.patterns;
 					delete info.reg;
 					info['cardTypeName'] = getCardTypeName(info['cardType']);
+					info['backName'] = info['bankName'];//向下兼容，修改字段错别字
 					return info;
 				}
 			} 
