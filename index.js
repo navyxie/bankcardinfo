@@ -2031,6 +2031,15 @@
 			]
 		}																						
 	]
+	function getBankNameByBankCode(bankcode){
+		for(var i = 0 , len = bankcardList.length ; i < len ; i++){
+			var bankcard = bankcardList[i];
+			if(bankcode == bankcard.bankCode){
+				return bankcard.bankName;
+			}
+		}
+		return "";
+	}
 	function getBankInfoByCardNo(cardNo){
 		if(isNaN(cardNo)){
 			cardNo = parseInt(cardNo);
@@ -2038,6 +2047,10 @@
 				console && console.warn && console.warn('银行卡号必须是数字');
 				return "";
 			}
+		}
+		if(cardNo.toString().length < 15 || cardNo.toString().length > 19){
+			console && console.warn && console.warn('银行卡位数必须是15到19位');
+			return "";
 		}
 		for(var i = 0 , len = bankcardList.length ; i < len ; i++){
 			var bankcard = bankcardList[i];
@@ -2054,7 +2067,46 @@
 				}
 			} 
 		}
-		return "";
+		if (typeof module !== 'undefined' && module.exports) {
+			var https = require('https'); 
+			https.get("https://ccdcapi.alipay.com/validateAndCacheCardInfo.json?_input_charset=utf-8&cardNo="+cardNo+"&cardBinCheck=true",function(res){
+				if(res.statusCode == 200){
+					var chunk = "";
+					res.on('data', function(d) {
+						chunk += d;
+					});
+					res.on('end',function(){
+						try{
+							var bankInfo = JSON.parse(chunk);
+							if(bankInfo.validated){
+								var info = {};
+								info['bankName'] = getBankNameByBankCode(bankInfo.bank);
+								info['cardType'] = bankInfo.cardType;
+								info['bankCode'] = bankInfo.bank;
+								info['cardTypeName'] = getCardTypeName(bankInfo.cardType);
+								info['backName'] = info['bankName'];//向下兼容，修改字段错别字
+								return info;
+							}else{
+								console.log("该银行卡不存在");
+								console.log(chunk);
+								return "";
+							}						
+						}catch(e){
+							console.log('获取alipay接口信息出错了');
+							console.log(e);
+							return "";
+						}
+						
+					})
+				}else{
+					return "";
+				}			
+			}).on('error', function(e) {
+			  return "";
+			});
+		}else{
+			return "";
+		}	
 	}
 	if (typeof exports !== 'undefined'){
 		if(typeof module !== 'undefined' && module.exports){

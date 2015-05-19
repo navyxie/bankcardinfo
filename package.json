@@ -1,6 +1,6 @@
 {
   "name": "bankcardinfo",
-  "version": "0.0.6",
+  "version": "0.1.0",
   "description": "'query bankcard infomation by bankcard NO.'",
   "main": "index.js",
   "scripts": {
@@ -30,7 +30,7 @@
     "url": "https://github.com/navyxie/bankcardinfo/issues"
   },
   "homepage": "https://github.com/navyxie/bankcardinfo",
-  "_id": "bankcardinfo@0.0.6",
+  "_id": "bankcardinfo@0.1.0",
   "_shasum": "f03ddecbc0af485ae74d7447a6a24aabddfe9d1d",
   "_from": "bankcardinfo@",
   "_npmVersion": "2.7.4",
@@ -41,7 +41,7 @@
   },
   "dist": {
     "shasum": "f03ddecbc0af485ae74d7447a6a24aabddfe9d1d",
-    "tarball": "http://registry.npmjs.org/bankcardinfo/-/bankcardinfo-0.0.6.tgz"
+    "tarball": "http://registry.npmjs.org/bankcardinfo/-/bankcardinfo-0.1.0.tgz"
   },
   "maintainers": [
     {
@@ -50,5 +50,5 @@
     }
   ],
   "directories": {},
-  "_resolved": "https://registry.npmjs.org/bankcardinfo/-/bankcardinfo-0.0.6.tgz"
+  "_resolved": "https://registry.npmjs.org/bankcardinfo/-/bankcardinfo-0.1.0.tgz"
 }
