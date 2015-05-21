@@ -19,9 +19,14 @@ describe('#getBankInfoByCardNo()',function(){
 	});
 	it('test CCB card',function(){
 		BCI.getBankInfoByCardNo(5264108888888888).bankCode.should.be.equal('CCB');
-		BCI.getBankInfoByCardNo(6236683320000324632).bankCode.should.be.equal('CCB');
 		BCI.getBankInfoByCardNo(554403388888888888).cardType.should.be.equal('CC');
 	});
+	it('test CCB card async',function(done){
+		BCI.getBankInfoByCardNoAsync(6236688888888888888,function(data){
+			data.bankCode.should.be.equal('CCB');
+			done();
+		})
+	})
 	it('test not a number card',function(){
 		BCI.getBankInfoByCardNo("test").should.not.be.ok;
 	});
