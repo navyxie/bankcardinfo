@@ -2,6 +2,8 @@
 //cardType:DC->储蓄卡,CC->信用卡
 (function(){
 	var root = this;
+	var errMsg = "该银行卡不存在";
+	var checkFlag = true;
 	var cardTypeMap = {
 		DC:"储蓄卡",
 		CC:"信用卡",
@@ -2044,12 +2046,16 @@
 		if(isNaN(cardNo)){
 			cardNo = parseInt(cardNo);
 			if(isNaN(cardNo)){
-				console && console.warn && console.warn('银行卡号必须是数字');
+				checkFlag = false;
+				errMsg = '银行卡号必须是数字';
+				// console && console.warn && console.warn(errMsg);
 				return "";
 			}
 		}
 		if(cardNo.toString().length < 15 || cardNo.toString().length > 19){
-			console && console.warn && console.warn('银行卡位数必须是15到19位');
+			checkFlag = false;
+			errMsg = '银行卡位数必须是15到19位';
+			// console && console.warn && console.warn(errMsg);
 			return "";
 		}
 		for(var i = 0 , len = bankcardList.length ; i < len ; i++){
@@ -2075,6 +2081,9 @@
 		if(info){
 			cbf(info);
 		}else{
+			if(!checkFlag){
+				return cbf();
+			}
 			if (typeof module !== 'undefined' && module.exports) {
 				var https = require('https'); 
 				https.get("https://ccdcapi.alipay.com/validateAndCacheCardInfo.json?_input_charset=utf-8&cardNo="+cardNo+"&cardBinCheck=true",function(res){
@@ -2095,27 +2104,38 @@
 									info['backName'] = info['bankName'];//向下兼容，修改字段错别字
 									cbf(info)
 								}else{
-									console.log("该银行卡不存在");
-									console.log(chunk);
+									errMsg = "该银行卡不存在:"+chunk;
+									// console.log(chunk);
 									cbf();
 								}						
 							}catch(e){
-								console.log('获取alipay接口信息出错了');
-								console.log(e);
+								errMsg = '获取alipay接口信息出错了';
+								// console.log(e);
 								cbf();
-							}
-							
+							}						
 						})
 					}else{
+						errMsg = '获取alipay接口信息出错了,statusCode:'+res.statusCode;						
 						cbf();
 					}			
 				}).on('error', function(e) {
-				  cbf();
+					errMsg = '获取alipay接口信息出错了';
+					cbf();
 				});
 			}else{
 				cbf();
 			}	
 		}
+	}
+	function getBankBin(cardNo,cbf){
+		getBankInfoByCardNoAsync(cardNo,function(bin){
+			if(!bin){
+				cbf(errMsg);
+			}else{
+				delete bin.backName;
+				cbf(null,bin);
+			}
+		})
 	}
 	if (typeof exports !== 'undefined'){
 		if(typeof module !== 'undefined' && module.exports){
@@ -2123,16 +2143,18 @@
 		}
 		exports.getBankInfoByCardNo = getBankInfoByCardNo;
 		exports.getBankInfoByCardNoAsync = getBankInfoByCardNoAsync;
+		exports.getBankBin = getBankBin; 
 	}else if(typeof define === 'function' && define.amd){
 		define('bankInfo', [], function(){
-			return {getBankInfoByCardNo:getBankInfoByCardNo,getBankInfoByCardNoAsync:getBankInfoByCardNoAsync};
+			return {getBankInfoByCardNo:getBankInfoByCardNo,getBankInfoByCardNoAsync:getBankInfoByCardNoAsync,getBankBin:getBankBin};
 		});
 	}else if(typeof define === 'function' && define.cmd){
 		define(function(){
-			return {getBankInfoByCardNo:getBankInfoByCardNo,getBankInfoByCardNoAsync:getBankInfoByCardNoAsync};;
+			return {getBankInfoByCardNo:getBankInfoByCardNo,getBankInfoByCardNoAsync:getBankInfoByCardNoAsync,getBankBin:getBankBin};
 		})
 	}else{
 		root.getBankInfoByCardNo = getBankInfoByCardNo;
 		root.getBankInfoByCardNoAsync = getBankInfoByCardNoAsync;
+		root.getBankBin = getBankBin;
 	}
 }.call(this));

@@ -1,6 +1,6 @@
 {
   "name": "bankcardinfo",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "'query bankcard infomation by bankcard NO.'",
   "main": "index.js",
   "scripts": {
