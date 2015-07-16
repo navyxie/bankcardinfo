@@ -1,6 +1,6 @@
 {
   "name": "bankcardinfo",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "'query bankcard infomation by bankcard NO.'",
   "main": "index.js",
   "scripts": {
@@ -16,7 +16,9 @@
     "bankinfo",
     "银行卡",
     "银行名字",
-    "根据银行卡号查询银行信息"
+    "根据银行卡号查询银行信息",
+    "银行卡bin",
+    "查询"
   ],
   "devDependencies": {
     "mocha": "*",
@@ -30,15 +32,6 @@
     "url": "https://github.com/navyxie/bankcardinfo/issues"
   },
   "homepage": "https://github.com/navyxie/bankcardinfo",
-  "_id": "bankcardinfo@0.1.0",
-  "_shasum": "f03ddecbc0af485ae74d7447a6a24aabddfe9d1d",
-  "_from": "bankcardinfo@",
-  "_npmVersion": "2.7.4",
-  "_nodeVersion": "0.12.2",
-  "_npmUser": {
-    "name": "navyxie",
-    "email": "navyxie2010@gmail.com"
-  },
   "maintainers": [
     {
       "name": "navyxie",
