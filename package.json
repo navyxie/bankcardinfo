@@ -1,6 +1,6 @@
 {
   "name": "bankcardinfo",
-  "version": "0.3.3",
+  "version": "1.0.0",
   "description": "'query bankcard infomation by bankcard NO.'",
   "main": "index.js",
   "scripts": {
@@ -21,8 +21,9 @@
     "查询"
   ],
   "devDependencies": {
-    "mocha": "*",
-    "should": "*"
+    "mocha": "^2.2.5",
+    "async": "^1.5.0",
+    "should": "^7.0.4"
   },
   "author": {
     "name": "navyxie"

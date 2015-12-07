@@ -2,14 +2,15 @@
 //cardType:DC->储蓄卡,CC->信用卡
 (function(){
 	var root = this;
-	var errMsg = "该银行卡不存在";
-	var checkFlag = true;
 	var cardTypeMap = {
 		DC:"储蓄卡",
 		CC:"信用卡",
 		SCC:"准贷记卡",
 		PC:"预付费卡"
 	};
+	function isFunction(fn){
+		return Object.prototype.toString.call(fn) === '[object Function]';
+	}
 	function extend(target,source){
 		var result = {};
 		var key;
@@ -2042,22 +2043,7 @@
 		}
 		return "";
 	}
-	function getBankInfoByCardNo(cardNo){
-		if(isNaN(cardNo)){
-			cardNo = parseInt(cardNo);
-			if(isNaN(cardNo)){
-				checkFlag = false;
-				errMsg = '银行卡号必须是数字';
-				// console && console.warn && console.warn(errMsg);
-				return "";
-			}
-		}
-		if(cardNo.toString().length < 15 || cardNo.toString().length > 19){
-			checkFlag = false;
-			errMsg = '银行卡位数必须是15到19位';
-			// console && console.warn && console.warn(errMsg);
-			return "";
-		}
+	function _getBankInfoByCardNo(cardNo,cbf){
 		for(var i = 0 , len = bankcardList.length ; i < len ; i++){
 			var bankcard = bankcardList[i];
 			var patterns = bankcard.patterns;
@@ -2068,93 +2054,96 @@
 					delete info.patterns;
 					delete info.reg;
 					info['cardTypeName'] = getCardTypeName(info['cardType']);
-					info['backName'] = info['bankName'];//向下兼容，修改字段错别字
-					return info;
+					return cbf(null,info);
 				}
 			} 
 		}
-		return "";
+		return cbf(null);
 	}
-	function getBankInfoByCardNoAsync(cardNo,cbf){
-		var info = getBankInfoByCardNo(cardNo);
-		cbf = cbf || function(){};
-		if(info){
-			cbf(info);
-		}else{
-			if(!checkFlag){
-				return cbf();
-			}
-			if (typeof module !== 'undefined' && module.exports) {
-				var https = require('https'); 
-				https.get("https://ccdcapi.alipay.com/validateAndCacheCardInfo.json?_input_charset=utf-8&cardNo="+cardNo+"&cardBinCheck=true",function(res){
-					if(res.statusCode == 200){
-						var chunk = "";
-						res.on('data', function(d) {
-							chunk += d;
-						});
-						res.on('end',function(){
-							try{
-								var bankInfo = JSON.parse(chunk);
-								if(bankInfo.validated){
-									var info = {};
-									info['bankName'] = getBankNameByBankCode(bankInfo.bank);
-									info['cardType'] = bankInfo.cardType;
-									info['bankCode'] = bankInfo.bank;
-									info['cardTypeName'] = getCardTypeName(bankInfo.cardType);
-									info['backName'] = info['bankName'];//向下兼容，修改字段错别字
-									cbf(info)
-								}else{
-									errMsg = "该银行卡不存在:"+chunk;
-									// console.log(chunk);
-									cbf();
-								}						
-							}catch(e){
-								errMsg = '获取alipay接口信息出错了';
-								// console.log(e);
-								cbf();
-							}						
-						})
-					}else{
-						errMsg = '获取alipay接口信息出错了,statusCode:'+res.statusCode;						
-						cbf();
-					}			
-				}).on('error', function(e) {
-					errMsg = '获取alipay接口信息出错了';
-					cbf();
-				});
+	function _getBankInfoByCardNoAsync(cardNo,cbf){
+		var errMsg = "";
+		_getBankInfoByCardNo(cardNo,function(err,info){
+			if(!err && info){
+				return cbf(null,info);
 			}else{
-				cbf();
-			}	
-		}
+				if (typeof module !== 'undefined' && module.exports) {
+					var https = require('https'); 
+					https.get("https://ccdcapi.alipay.com/validateAndCacheCardInfo.json?_input_charset=utf-8&cardNo="+cardNo+"&cardBinCheck=true",function(res){
+						if(res.statusCode == 200){
+							var chunk = "";
+							res.on('data', function(d) {
+								chunk += d;
+							});
+							res.on('end',function(){
+								try{
+									var bankInfo = JSON.parse(chunk);
+									if(bankInfo.validated){
+										var info = {};
+										info['bankName'] = getBankNameByBankCode(bankInfo.bank);
+										info['cardType'] = bankInfo.cardType;
+										info['bankCode'] = bankInfo.bank;
+										info['cardTypeName'] = getCardTypeName(bankInfo.cardType);
+										info['backName'] = info['bankName'];//向下兼容，修改字段错别字
+										cbf(null,info);
+									}else{
+										errMsg = cardNo+":该银行卡不存在,"+chunk;
+										cbf(errMsg);
+									}						
+								}catch(e){
+									errMsg = cardNo+':获取alipay接口信息出错了,返回json格式不正确';
+									cbf(errMsg);
+								}						
+							})
+						}else{
+							errMsg = cardNo+':获取alipay接口信息出错了,statusCode,'+res.statusCode;						
+							cbf(errMsg);
+						}			
+					}).on('error', function(e) {
+						errMsg = cardNo+':获取alipay接口信息出错了';
+						cbf(errMsg);
+					});
+				}else{
+					cbf(cardNo+":该银行卡不存在");
+				}
+			}
+		});
 	}
 	function getBankBin(cardNo,cbf){
-		getBankInfoByCardNoAsync(cardNo,function(bin){
-			if(!bin){
-				cbf(errMsg);
-			}else{
-				delete bin.backName;
-				cbf(null,bin);
+		var	errMsg = '';
+		if(!isFunction(cbf)){
+			cbf = function(){};
+		}
+		if(isNaN(cardNo)){
+			cardNo = parseInt(cardNo);
+			if(isNaN(cardNo)){
+				checkFlag = false;
+				errMsg = cardNo+':银行卡号必须是数字';
+				return cbf(errMsg)
 			}
-		})
+		}
+		if(cardNo.toString().length < 15 || cardNo.toString().length > 19){
+			checkFlag = false;
+			errMsg = cardNo+':银行卡位数必须是15到19位';
+			return cbf(errMsg)
+		}
+		_getBankInfoByCardNoAsync(cardNo,function(err,bin){
+			cbf(err,bin);
+		});
 	}
 	if (typeof exports !== 'undefined'){
 		if(typeof module !== 'undefined' && module.exports){
-			exports = module.exports = {getBankInfoByCardNo:getBankInfoByCardNo,getBankInfoByCardNoAsync:getBankInfoByCardNoAsync};
+			exports = module.exports = {getBankBin:getBankBin};
 		}
-		exports.getBankInfoByCardNo = getBankInfoByCardNo;
-		exports.getBankInfoByCardNoAsync = getBankInfoByCardNoAsync;
 		exports.getBankBin = getBankBin; 
 	}else if(typeof define === 'function' && define.amd){
 		define('bankInfo', [], function(){
-			return {getBankInfoByCardNo:getBankInfoByCardNo,getBankInfoByCardNoAsync:getBankInfoByCardNoAsync,getBankBin:getBankBin};
+			return {getBankBin:getBankBin};
 		});
 	}else if(typeof define === 'function' && define.cmd){
 		define(function(){
-			return {getBankInfoByCardNo:getBankInfoByCardNo,getBankInfoByCardNoAsync:getBankInfoByCardNoAsync,getBankBin:getBankBin};
+			return {getBankBin:getBankBin};
 		})
 	}else{
-		root.getBankInfoByCardNo = getBankInfoByCardNo;
-		root.getBankInfoByCardNoAsync = getBankInfoByCardNoAsync;
 		root.getBankBin = getBankBin;
 	}
 }.call(this));

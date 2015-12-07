@@ -1,5 +1,7 @@
 # 通过银行卡号查询银行类型和银行卡类型
 
+**建议升级使用1.0.0+的版本，该版本不向下兼容，即不再支持getBankInfoByCardNoAsync，getBankInfoByCardNo这两个API，旧版本用户请升级并使用 getBankBin API替换**
+
 ## npm install bankcardinfo
 
 ### 成功获取卡bin信息时，返回值为json对象
@@ -16,8 +18,6 @@
 ### API
 
 - [getBankBin](#getBankBin)
-- [getBankInfoByCardNoAsync](#getBankInfoByCardNoAsync)
-- [getBankInfoByCardNo](#getBankInfoByCardNo)
 
 <a name="getBankBin" />
 
@@ -29,10 +29,22 @@ var BIN = require('bankcardinfo');
 BIN.getBankBin('6227003320240034988',function(err,data){
 	if(!err){
 		//todo 
-		//data 
+		{
+			bankName:"中国工商银行",
+			bankCode:"ICBC",
+			cardType:"DC",
+			cardTypeName:"储蓄卡"
+		}
 	}
 })
 ```
+
+
+0.3.3版本以下API(存在并发请求的Bug，建议升级到1.0.0+)：
+
+- [getBankBin](#getBankBin)
+- [getBankInfoByCardNoAsync](#getBankInfoByCardNoAsync)
+- [getBankInfoByCardNo](#getBankInfoByCardNo)
 
 <a name="getBankInfoByCardNoAsync" />
 
