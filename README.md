@@ -40,7 +40,8 @@ BIN.getBankBin('6227003320240034988',function(err,data){
 ```
 
 
-0.3.3版本以下API(存在并发请求的Bug，建议升级到1.0.0+)：
+
+# 0.3.3版本以下API(存在并发请求的Bug，建议升级到1.0.0+)
 
 - [getBankBin](#getBankBin)
 - [getBankInfoByCardNoAsync](#getBankInfoByCardNoAsync)
