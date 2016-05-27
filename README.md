@@ -1,5 +1,7 @@
 # 通过银行卡号查询银行类型和银行卡类型
 
+[![Build Status via Travis CI](https://travis-ci.org/navyxie/bankcardinfo.svg?branch=master)](https://travis-ci.org/navyxie/store-ttl) [![Coverage Status](https://coveralls.io/repos/github/navyxie/bankcardinfo/badge.svg?branch=master)](https://coveralls.io/github/navyxie/store-ttl?branch=master)
+
 **建议升级使用1.0.0+的版本，该版本不向下兼容，即不再支持getBankInfoByCardNoAsync，getBankInfoByCardNo这两个API，旧版本用户请升级并使用 getBankBin API替换**
 
 ## npm install bankcardinfo

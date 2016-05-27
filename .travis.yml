@@ -1,0 +1,15 @@
+language: node_js
+
+repo_token: tQkf9u4g585bRi1idkMZZ0rXW3qa14yXD
+
+node_js:  
+
+  - 0.10.35
+
+
+script: npm test
+
+after_script: npm run cov
+
+after_success: 
+  "curl -L -l https://coveralls.io/repos/github/navyxie/bankcardinfo/badge.svg?branch=master"

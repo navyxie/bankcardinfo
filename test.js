@@ -2,7 +2,7 @@ var should = require('should');
 var BCI = require('./index');
 var async = require('async');
 describe('#getBankInfoByCardNo()',function(){
-	this.timeout(5000);
+	this.timeout(50000);
 	it('test PSBC card',function(done){
 		BCI.getBankBin('6228108888888888',function(err,data){
 			should.not.exist(err);
