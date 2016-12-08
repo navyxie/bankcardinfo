@@ -2,6 +2,7 @@
 //cardType:DC->储蓄卡,CC->信用卡
 (function(){
 	var root = this;
+	var checkFlag = false;
 	var cardTypeMap = {
 		DC:"储蓄卡",
 		CC:"信用卡",
