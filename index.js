@@ -2116,13 +2116,11 @@
 		if(isNaN(cardNo)){
 			cardNo = parseInt(cardNo);
 			if(isNaN(cardNo)){
-				checkFlag = false;
 				errMsg = cardNo+':银行卡号必须是数字';
 				return cbf(errMsg)
 			}
 		}
 		if(cardNo.toString().length < 15 || cardNo.toString().length > 19){
-			checkFlag = false;
 			errMsg = cardNo+':银行卡位数必须是15到19位';
 			return cbf(errMsg)
 		}
