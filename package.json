@@ -1,6 +1,6 @@
 {
   "name": "bankcardinfo",
-  "version": "1.0.2",
+  "version": "2.0.0",
   "description": "'query bankcard infomation by bankcard NO.'",
   "main": "index.js",
   "scripts": {
@@ -27,6 +27,9 @@
     "should": "^7.0.4",
     "istanbul": "^0.4.3",
     "coveralls": "2.11.9"
+  },
+  "dependencies": {
+    "bluebird": "^3.4.1"
   },
   "author": {
     "name": "navyxie"

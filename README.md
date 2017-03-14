@@ -4,6 +4,7 @@
 
 **建议升级使用1.0.0+的版本，该版本不向下兼容，即不再支持getBankInfoByCardNoAsync，getBankInfoByCardNo这两个API，旧版本用户请升级并使用 getBankBin API替换**
 
+*2.0.0版本开始支持promise写法*
 ## npm install bankcardinfo
 
 ### 成功获取卡bin信息时，返回值为json对象
@@ -28,6 +29,7 @@
 ### 传入卡号，异步返回。当第一个参数为空时，表示获取卡bin信息成功(标准API)
 ```js
 var BIN = require('bankcardinfo');
+//callback 方式调用
 BIN.getBankBin('6227003320240034988',function(err,data){
 	if(!err){
 		//todo 
@@ -39,6 +41,14 @@ BIN.getBankBin('6227003320240034988',function(err,data){
 		}
 	}
 })
+// promise 方式调用, 2.0.0 及以上版本支持
+BIN.getBankBin('6227003320240034988')
+	.then(function (data) {
+
+	})
+	.catch(function (err) {
+
+	})
 ```
 
 
