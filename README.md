@@ -5,6 +5,7 @@
 **建议升级使用1.0.0+的版本，该版本不向下兼容，即不再支持getBankInfoByCardNoAsync，getBankInfoByCardNo这两个API，旧版本用户请升级并使用 getBankBin API替换**
 
 *2.0.0版本开始支持promise写法*
+
 ## npm install bankcardinfo
 
 ### 成功获取卡bin信息时，返回值为json对象
