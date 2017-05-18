@@ -613,6 +613,13 @@
       cardType: "CC"
     }]
   }, {
+    bankName: "天津滨海德商村镇银行",
+    bankCode: "BDCBANK",
+    patterns: [{
+      reg: /^(621091)\d{13}$/g,
+      cardType: "DC"
+    }]
+  }, {
     bankName: "浙商银行",
     bankCode: "CZBANK",
     patterns: [{

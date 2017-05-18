@@ -92,6 +92,12 @@ describe('#getBankInfoByCardNo()', function() {
       done();
     });
   });
+  it('test BDCBANK', function(done) {
+    BCI.getBankBin('6210910002001951239', function(err, data) {
+      data.bankCode.should.be.equal('BDCBANK');
+      done();
+    });
+  });
   it('test concurrent request', function(done) {
     async.parallel([
         function(callback) {
