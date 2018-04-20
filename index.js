@@ -1307,13 +1307,13 @@
       cardType: "CC"
     }]
   }, {
-    bankName: "杭州商业银行",
+    bankName: "杭州银行",
     bankCode: "HZCB",
     patterns: [{
-      reg: /^(603367|622878)\d{12}$/g,
+      reg: /^(603367|622878|623061)\d{12}$/g,
       cardType: "DC"
     }, {
-      reg: /^(622397)\d{11}$/g,
+      reg: /^(622397|622286|628236|625800)\d{11}$/g,
       cardType: "CC"
     }]
   }, {
