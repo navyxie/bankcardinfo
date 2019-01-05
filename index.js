@@ -1481,6 +1481,22 @@
       reg: /^(621274|621324)\d{13}$/g,
       cardType: "DC"
     }]
+  }, {
+    bankName: "浙江泰隆商业银行",
+    bankCode: "ZJTLCB",
+    patterns: [{
+      reg: /^(622287)\d{10}$/g,
+      cardType: "CC"
+    }, {
+      reg: /^(622717)\d{10}$/g,
+      cardType: "SCC"
+    }, {
+      reg: /^(621480)\d{13}$/g,
+      cardType: "DC"
+    }, {
+      reg: /^(622141)\d{10}$/g,
+      cardType: "DC"
+    }]
   }]
 
   function getBankNameByBankCode(bankcode) {
