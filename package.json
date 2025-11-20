@@ -23,7 +23,7 @@
   ],
   "devDependencies": {
     "mocha": "^2.2.5",
-    "async": "^1.5.0",
+    "async": "^2.6.4",
     "should": "^7.0.4",
     "istanbul": "^0.4.3",
     "coveralls": "2.11.9"
