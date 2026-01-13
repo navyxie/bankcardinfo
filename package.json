@@ -26,7 +26,7 @@
     "async": "^2.6.4",
     "should": "^7.0.4",
     "istanbul": "^0.4.3",
-    "coveralls": "2.11.9"
+    "coveralls": "2.13.3"
   },
   "dependencies": {
     "bluebird": "^3.4.1"
